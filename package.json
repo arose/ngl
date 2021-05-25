@@ -50,7 +50,8 @@
     "url": "https://github.com/arose/ngl/issues"
   },
   "files": [
-    "dist"
+    "dist",
+    "declarations"
   ],
   "author": "Alexander Rose <alexander.rose@weirdbyte.de>",
   "contributors": [],
