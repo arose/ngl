@@ -142,6 +142,7 @@ class MouseObserver {
   lastClicked: number
   overElement: boolean
   lastTouchDistance: number
+  private frameRequest: number
 
   /**
    * @param  {Element} domElement - the dom element to observe mouse events in
@@ -218,7 +219,7 @@ class MouseObserver {
         this.signals.hovered.dispatch(cp.x, cp.y)
       }
     }
-    window.requestAnimationFrame(this._listen)
+    this.frameRequest = window.requestAnimationFrame(this._listen)
   }
 
   /**
@@ -484,6 +485,7 @@ class MouseObserver {
     document.removeEventListener('touchstart', this._onTouchstart)
     document.removeEventListener('touchend', this._onTouchend)
     document.removeEventListener('touchmove', this._onTouchmove)
+    window.cancelAnimationFrame(this.frameRequest)
   }
 }
 

@@ -184,6 +184,7 @@ export default class Viewer {
   private renderPending: boolean
   private lastRenderedPicking: boolean
   private isStill: boolean
+  private frameRequest: number
 
   sampleLevel: number
   private cDist: number
@@ -1007,7 +1008,7 @@ export default class Viewer {
       if (Debug) Log.log('rendered still frame')
     }
 
-    window.requestAnimationFrame(this.animate)
+    this.frameRequest = window.requestAnimationFrame(this.animate)
   }
 
   pick (x: number, y: number) {
@@ -1399,5 +1400,6 @@ export default class Viewer {
 
   dispose () {
     this.renderer.dispose()
+    window.cancelAnimationFrame(this.frameRequest)
   }
 }
