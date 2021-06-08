@@ -5,7 +5,7 @@ window.addEventListener('resize', function () {
 
 var newDiv = document.getElementById('viewport').appendChild(document.createElement('div'))
 newDiv.setAttribute('style', 'position: absolute; top: 0; left: 20px')
-newDiv.innerHTML = '<div class="controls"><h3>Example Cross-Links over Human Serum Albumin</h3><p class="credit">Data courtessy of Adam Belsom, Rappsilber Lab</p><p>Cross-Link Quality Filter </p><span id="minValue"></span><input type="range" min="0" max="10" step="0.1" value="0" id="scoreSlider" class="mySlider"></input><span id="maxValue"></span></div>'
+newDiv.innerHTML = `<div class="controls"><h3>Example Cross-Links over Human Serum Albumin</h3><p class="credit">Data courtessy of Adam Belsom, Rappsilber Lab</p><p>Cross-Link Quality Filter </p><span id="minValue"></span><input type="range" min="0" max="10" step="0.1" value="0" id="scoreSlider" class="mySlider"></input><span id="maxValue"></span></div>`
 
 // example crosslink data
 var links = [{
