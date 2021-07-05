@@ -19,6 +19,10 @@ See it in action:
 * [CodePen template](https://codepen.io/pen?template=JNLMXb)
 * [Pens tagged _ngl_](https://codepen.io/tag/ngl/)
 
+Integration with python and R:
+
+* [NGLView](https://github.com/nglviewer/nglview): Jupyter Notebook Widget 
+* [NGLViewR](https://github.com/nvelden/NGLVieweR/) R htmlwidget (and an example [Shiny Application](https://niels-van-der-velden.shinyapps.io/shinyNGLVieweR/))
 
 Documentation:
 
